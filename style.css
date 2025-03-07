@@ -104,7 +104,7 @@ a:link, a:visited {
 /*todo: figure out how to make it continue from where it stopped spinning*/
 
 .image {
-  width: 100px;
+/*   width: 100px; */
   height: 100px;
 }
 
