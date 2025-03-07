@@ -1,0 +1,174 @@
+html {
+  height: 100%;
+  width: 100%;
+  /* background-color: black; */
+  background-image: url("stars.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  width: 100%;
+  height: 15%;
+}
+
+#header {
+  background: #0f30ec;
+  color: white;
+}
+
+#heading {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  height: 0vh;
+  width: 100vw;
+  transform: translate(0%, -20%);
+}
+
+.box {
+  background: #0f30ec00;
+  color: #0bd30c;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid #0bd30c;
+}
+
+#mc, #sta_lu, #astro, #haunt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 30vh;
+}
+
+.title {
+  margin: 5px;
+  font-size: 13px;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+#creds, #link {
+  position: fixed;
+  bottom: 20px;
+}
+
+#creds {
+  left: 20px;
+  width: 30vw;
+}
+
+#link {
+  right: 20px;
+  width: 20vw;
+}
+
+a:link, a:visited {
+  color: #21fecd;
+  text-decoration: underline;
+}
+
+.image, #audio1, #audio2, #audio3, #audio4 {
+  display:block;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+    animation: rotate 12s infinite linear;
+} 
+/*todo: figure out how to make it continue from where it stopped spinning*/
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+#audio1, #audio2, #audio3, #audio4 {
+  width: 48vw; height: 30px; font-size: 10px;
+  margin: 10px;
+}
+
+.download {
+  vertical-align: text-bottom;
+  width:15px; height:15px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #56AEFF;
+}
+
+.audio-player {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  background-color: #01025b;
+  padding: 10px;
+  border-radius: 8px;
+  width: 35vw;
+  /* color: white; */
+  font-family: Arial, sans-serif;
+  gap: 5px;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.play-pause {
+  grid-row: span 2;  /* Makes the play button span two rows */
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border-color: #00000000;
+  color: white;
+  /* border-radius: 20%; */
+  text-shadow: 0px 0px 5px #5ecbab;
+}
+
+.track-title {
+  grid-column: 2 / span 2;
+}
+
+.seek-bar {
+  grid-column: 2 / span 2;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #fefefe;
+  border-radius: 3px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  accent-color: #5ecbab;
+  box-shadow: 0px 0px 5px #5ecbab;
+}
+
+.current-time, .duration {
+  grid-column: 4;
+}
