@@ -22,6 +22,13 @@ for (let btn of btns){
       images[n].style.animationPlayState = "running";
       btn.innerHTML = "⏸";
       boxes[n].style.boxShadow = "0px 0px 5px #5ecbab";
+      for (let audio of audios){
+        if (audio!=audios[n] && !audio.paused){
+          btns[audios.indexOf(audio)].innerHTML = "▶";
+          audio.pause();
+          boxes[audios.indexOf(audio)].style.boxShadow = "none";
+        }
+      }
     } else {
       btn.innerHTML = "▶";
       audios[n].pause();
