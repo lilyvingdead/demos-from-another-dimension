@@ -54,12 +54,12 @@ html {
   height: 30vh;
 }
 
-#astro {
+/*#astro {
   background-image: url("bgimg3.png");
   background-color: rgba(255, 255, 255, 0.486);
   background-blend-mode: overlay;
   background-size: inherit;
-}
+}*/
   
 .title {
   margin: 5px;
