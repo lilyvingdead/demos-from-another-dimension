@@ -21,6 +21,7 @@ for (let btn of btns){
       audios[n].play();
       images[n].style.animationPlayState = "running";
       btn.innerHTML = "⏸";
+      boxes[n].style.boxShadow = "0px 0px 5px #5ecbab";
     } else {
       btn.innerHTML = "▶";
       audios[n].pause();
