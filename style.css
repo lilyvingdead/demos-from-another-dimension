@@ -205,6 +205,11 @@ a:link:not(#astroboy), a:visited:not(#astroboy) {
   text-decoration: underline;
 }
 
+#astroboy {
+  color: #0bd30c;
+  text-decoration: none;
+}
+
 a:hover, .track-title:hover, .download:hover {
   text-shadow: 0px 0px 10px #5ecbab;
 }
