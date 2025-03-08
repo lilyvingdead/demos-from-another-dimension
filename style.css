@@ -54,6 +54,10 @@ html {
   height: 30vh;
 }
 
+#astro {
+ background-image: url("bgimg3.png"); 
+}
+  
 .title {
   margin: 5px;
   font-size: 13px;
