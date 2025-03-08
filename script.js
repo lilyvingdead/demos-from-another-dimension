@@ -3,6 +3,7 @@ let images = [];
 let btns = [];
 let bars = [];
 let cTime = [];
+let boxes = [document.getElementById("mc"), document.getElementById("sta_lu"), document.getElementById("astro"), document.getElementById("haunt")];
 
 for (let i = 1; i < 5; i++) {
   audios.push(document.getElementById("audio" + i));
@@ -14,15 +15,16 @@ for (let i = 1; i < 5; i++) {
 
 for (let btn of btns){
   let n = btns.indexOf(btn);
+  images[n].classList.add("spinning");
   btn.addEventListener("click", () => {
     if (audios[n].paused){
       audios[n].play();
-      images[n].classList.add("spinning");
+      images[n].style.animationPlayState = "running";
       btn.innerHTML = "⏸";
     } else {
       btn.innerHTML = "▶";
       audios[n].pause();
-      images[k].classList.remove("spinning");
+      boxes[n].style.boxShadow = "none";
     }
   });
 }
@@ -41,6 +43,12 @@ for (let bar of bars){
   });
   bar.addEventListener("input", () => {
     audios[k].currentTime = (bar.value / 100) * audios[k].duration;
-    // audios[k].play(); // does not rotate image or change button
+  });
+}
+
+for (let audio of audios) {
+  let m = audios.indexOf(audio);
+  audio.addEventListener("pause" || "ended", () => {
+    images[m].style.animationPlayState = "paused";
   });
 }
