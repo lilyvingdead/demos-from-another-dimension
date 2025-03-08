@@ -200,7 +200,7 @@ html {
   width: 20vw;
 }
 
-a:link, a:visited {
+a:link:not(#astroboy), a:visited:not(#astroboy) {
   color: #21fecd;
   text-decoration: underline;
 }
