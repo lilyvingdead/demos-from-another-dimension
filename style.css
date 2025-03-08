@@ -1,7 +1,6 @@
 html {
   height: 100%;
   width: 100%;
-  /* background-color: black; */
   background-image: url("stars.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -82,6 +81,10 @@ a:link, a:visited {
   text-decoration: underline;
 }
 
+a:hover, .track-title:hover, .download:hover {
+  text-shadow: 0px 0px 10px #5ecbab;
+}
+
 .image, #audio1, #audio2, #audio3, #audio4 {
   display:block;
   margin-top: 5px;
@@ -100,11 +103,11 @@ a:link, a:visited {
 
 .spinning {
     animation: rotate 12s infinite linear;
+    animation-play-state: paused;
 } 
-/*todo: figure out how to make it continue from where it stopped spinning*/
 
 .image {
-/*   width: 100px; */
+  width: 100px;
   height: 100px;
 }
 
@@ -113,13 +116,14 @@ a:link, a:visited {
   margin: 10px;
 }
 
+.tooltips {
+  position: relative;
+  display: inline-block;
+}
+
 .download {
   vertical-align: text-bottom;
   width:15px; height:15px;
-}
-
-audio::-webkit-media-controls-panel {
-  background-color: #56AEFF;
 }
 
 .audio-player {
@@ -139,15 +143,20 @@ audio::-webkit-media-controls-panel {
 }
 
 .play-pause {
-  grid-row: span 2;  /* Makes the play button span two rows */
+  grid-row: span 2;
   font-size: 24px;
   width: 40px;
   height: 40px;
   background: none;
   border-color: #00000000;
   color: white;
-  /* border-radius: 20%; */
   text-shadow: 0px 0px 5px #5ecbab;
+  vertical-align: text-middle;
+}
+
+.play-pause:hover {
+  font-size: 26px;
+  transition: all 500ms;
 }
 
 .track-title {
@@ -171,4 +180,39 @@ audio::-webkit-media-controls-panel {
 
 .current-time, .duration {
   grid-column: 4;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltips .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltips:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
