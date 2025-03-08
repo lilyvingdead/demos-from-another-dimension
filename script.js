@@ -51,5 +51,7 @@ for (let audio of audios) {
   let m = audios.indexOf(audio);
   audio.addEventListener("pause" || "ended", () => {
     images[m].style.animationPlayState = "paused";
+    btns[m].innerHTML = "▶";
+    boxes[m].style.boxShadow = "none";
   });
 }
