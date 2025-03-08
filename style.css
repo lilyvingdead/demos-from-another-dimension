@@ -121,11 +121,13 @@ html {
   font-size: 13px;
   overflow-wrap: break-word;
   text-align: center;
+  letter-spacing: -0.05em;
 }
 
 #creds, #link {
   position: fixed;
   bottom: 20px;
+  letter-spacing: -0.05em;
 }
 
 #creds {
