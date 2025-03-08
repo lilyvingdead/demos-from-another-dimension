@@ -205,7 +205,7 @@ a:link:not(#astroboy), a:visited:not(#astroboy) {
   text-decoration: underline;
 }
 
-#astroboy {
+#astroboy, #astroboy:link, #astroboy:visited {
   color: #0bd30c;
   text-decoration: none;
 }
