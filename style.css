@@ -10,14 +10,16 @@ html {
 .header {
   padding: 10px;
   text-align: left;
-  font-size: 20px;
+  font-size: 25px;
   width: 100%;
   height: 15%;
 }
 
 #header {
-  background: #0f30ec;
-  color: white;
+  background: #0524d4;
+  color: #daaf31;
+  font-stretch: ultra-condensed;
+  outline: 2px black;
 }
 
 #heading {
