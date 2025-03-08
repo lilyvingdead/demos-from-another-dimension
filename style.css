@@ -107,6 +107,7 @@ html {
   align-items: center;
   width: 40vw;
   height: 30vh;
+  letter-spacing: -0.07em;
 }
 
 /*#astro {
@@ -121,13 +122,13 @@ html {
   font-size: 13px;
   overflow-wrap: break-word;
   text-align: center;
-  letter-spacing: -0.05em;
+/*   letter-spacing: -0.05em; */
 }
 
 #creds, #link {
   position: fixed;
   bottom: 20px;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.07em;
 }
 
 #creds {
